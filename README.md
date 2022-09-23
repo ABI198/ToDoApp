@@ -23,3 +23,4 @@ In order to simplify the UI Layer, the validation process was carried out in the
  * Result Pattern
 
 <b>Some Visuals About Application</b><br>
+![1](https://user-images.githubusercontent.com/99497305/191967606-808a6048-d8eb-4cda-868a-26a2817d8110.png)
