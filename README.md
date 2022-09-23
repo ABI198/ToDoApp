@@ -16,6 +16,7 @@ In order to simplify the UI Layer, the validation process was carried out in the
 <b>Design Principles Used</b><br>
  * MVC
  * SOLID Principles
+ * Asynchronous Programming
  * N-Tier Architecture
  * Repository Pattern
  * Unit of Work Pattern
