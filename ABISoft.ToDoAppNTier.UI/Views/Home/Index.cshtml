@@ -1,0 +1,42 @@
+﻿@model List<WorkShowDto>
+
+@{ 
+    var workShowList = Model;
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="~/bootstrap/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    
+    <div class="container">
+        <div class="float-end m-2">
+            <a asp-controller="Home" asp-action="Create" class="btn btn-primary">Yeni İş Ekle</a>
+        </div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">İş</th>
+                    <th scope="col">Durum</th>
+                    <th scope="col">Operasyon</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var workShow in workShowList)
+                {
+                    <tr>
+                        <td>@workShow.Definition</td>
+                        <td>@(workShow.IsCompleted?"Tamamlandı":"Tamamlanmadı")</td>
+                        <td>
+                            <a asp-controller="Home" asp-action="Update" asp-route-id="@workShow.Id" class="btn btn-warning btn-sm">Güncelle</a>
+                            <a asp-controller="Home" asp-action="Remove" asp-route-id="@workShow.Id" class="btn btn-danger btn-sm ms-2">Sil</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

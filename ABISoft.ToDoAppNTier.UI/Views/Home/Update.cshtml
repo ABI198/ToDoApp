@@ -1,0 +1,31 @@
+﻿@model WorkUpdateDto
+
+@{
+    var workUpdateDto = Model;
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="~/bootstrap/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container mt-4">
+        <form asp-controller="Home" asp-action="Update" method="post">
+            <input type="hidden" asp-for="@Model.Id" />
+            <div class="form-group mb-2">
+                <label for="Definition" class="d-inline">İşin Tanımı</label>
+                <input asp-for="@Model.Definition" class="ms-2" placeholder="İşin Tanımı">
+            </div>
+            <div class="form-check mb-2">
+                <input asp-for="@Model.IsCompleted" class="form-check-input">
+                <label class="form-check-label" for="IsCompleted">
+                    Tamamlandı mı
+                </label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-sm">Güncelle</button>
+            <div asp-validation-summary="All" class="text-danger mt-2"></div>
+        </form>
+    </div>
+</body>
+</html>
