@@ -3,7 +3,7 @@ An application with basic CRUD operations was developed to experience different 
 In order to simplify the UI Layer, the validation process was carried out in the Business Layer with FluentValidation.<br />
 <br />
 <b>Technologies Used</b>
- * C #
+ * C#
  * LINQ
  * Asp.Net Core MVC 
  * Entity Framework 
